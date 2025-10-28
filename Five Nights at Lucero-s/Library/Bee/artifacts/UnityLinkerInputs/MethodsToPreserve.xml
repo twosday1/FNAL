@@ -1,0 +1,26 @@
+<linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="ButtonSound">
+			<method name="PlayWalk"/>
+			<method name="PlayWalk"/>
+			<method name="PlayWalk"/>
+			<method name="StartWalkLoop"/>
+		</type>
+		<type fullname="CameraSwitcher">
+			<method name="SwitchToSecondCameraInstant"/>
+			<method name="SwitchToThirdCameraInstant"/>
+			<method name="ToggleCamera"/>
+		</type>
+		<type fullname="PlayerMovementController">
+			<method name="MoveToTarget"/>
+			<method name="MoveToTarget"/>
+			<method name="MoveToTarget"/>
+			<method name="MoveToTarget"/>
+		</type>
+		<type fullname="StartButton">
+			<method name="StartGame"/>
+			<method name="StartGame"/>
+			<method name="StartGame"/>
+		</type>
+	</assembly>
+</linker>
