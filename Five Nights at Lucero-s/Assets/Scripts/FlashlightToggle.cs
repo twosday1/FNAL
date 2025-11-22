@@ -88,38 +88,16 @@ public class FlashlightToggle : MonoBehaviour
         {
             if (debugLogs) Debug.Log($"Flash hit: {hit.collider.name}");
 
-            // Try to find StormyAction, LillyAction, LeiaAction, or TobyAction on the hit collider or its parents
-            var stormy = hit.collider.GetComponentInParent<StormyAction>();
-            if (stormy != null)
+            // Generic: find any MovementAgentBase-derived component in parents and register flash
+            var agent = hit.collider.GetComponentInParent<MovementAgentBase>();
+            if (agent != null)
             {
-                if (debugLogs) Debug.Log("Registering flash on StormyAction");
-                stormy.RegisterFlash();
+                if (debugLogs) Debug.Log($"Registering flash on {agent.name} ({agent.GetType().Name})");
+                agent.RegisterFlash();
             }
-
-            var lilly = hit.collider.GetComponentInParent<LillyAction>();
-            if (lilly != null)
+            else if (debugLogs)
             {
-                if (debugLogs) Debug.Log("Registering flash on LillyAction");
-                lilly.RegisterFlash();
-            }
-
-            var leia = hit.collider.GetComponentInParent<LeiaAction>();
-            if (leia != null)
-            {
-                if (debugLogs) Debug.Log("Registering flash on LeiaAction");
-                leia.RegisterFlash();
-            }
-
-            var toby = hit.collider.GetComponentInParent<TobyAction>();
-            if (toby != null)
-            {
-                if (debugLogs) Debug.Log("Registering flash on TobyAction");
-                toby.RegisterFlash();
-            }
-
-            if (stormy == null && lilly == null && leia == null && toby == null && debugLogs)
-            {
-                Debug.Log("Hit object has no enemy action component");
+                Debug.Log("Hit object has no MovementAgentBase-derived component");
             }
         }
         else

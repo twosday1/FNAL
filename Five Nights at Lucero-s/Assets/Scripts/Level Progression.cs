@@ -89,6 +89,9 @@ public class LevelProgression : MonoBehaviour
             if (screenFade != null)
                 screenFade.SetAlpha(1f);
 
+            // Ensure audio is silent on the death screen
+            CutToBlackAndPauseAudio();
+
             messageText.text = "You Died";
             messageText.gameObject.SetActive(true);
             SetMessageAlpha(1f);
@@ -141,6 +144,9 @@ public class LevelProgression : MonoBehaviour
         UpdateClockDisplay();
         s_playerDied = false;
 
+        // Unpause global audio now that the level actually begins
+        AudioListener.pause = false;
+
         // Notify Stormy, Lilly, Leia and Toby that the level has started so they can begin movement
         var stormy = FindObjectOfType<StormyAction>();
         if (stormy != null)
@@ -157,6 +163,10 @@ public class LevelProgression : MonoBehaviour
         var toby = FindObjectOfType<TobyAction>();
         if (toby != null)
             toby.OnLevelStart();
+
+        // call when the level/night actually starts
+        foreach (var agent in FindObjectsOfType<MovementAgentBase>())
+            agent.OnLevelStart();
 
         // Re-enable DogWalking spots for this level
         var spots = FindObjectsOfType<DogWalking>();
@@ -197,6 +207,10 @@ public class LevelProgression : MonoBehaviour
         var toby = FindObjectOfType<TobyAction>();
         if (toby != null)
             toby.ResetAndDisableMovement();
+
+        // call when the level ends / player dies
+        foreach (var agent in FindObjectsOfType<MovementAgentBase>())
+            agent.ResetAndDisableMovement();
 
         // Reset DogWalking spots so they won't play during end sequence / UI
         var spots = FindObjectsOfType<DogWalking>();
@@ -271,6 +285,9 @@ public class LevelProgression : MonoBehaviour
     public void OnPlayerDeath()
     {
         s_playerDied = true;
+
+        // Cut to black and pause all audio immediately
+        CutToBlackAndPauseAudio();
 
         // immediately stop/reset Stormy, Lilly, Leia and Toby so they won't move during the death/fade sequence
         var stormy = FindObjectOfType<StormyAction>();
@@ -349,5 +366,17 @@ public class LevelProgression : MonoBehaviour
             c.a = alpha;
             messageText.color = c;
         }
+    }
+
+    // Helper: immediately cut to black and pause all audio (called on death)
+    private void CutToBlackAndPauseAudio()
+    {
+        if (screenFade != null)
+            screenFade.SetAlpha(1f);
+
+        // Pause global audio so everything mutes immediately
+        AudioListener.pause = true;
+
+        Debug.Log("[LevelProgression] Player died: screen cut to black and audio paused.");
     }
 }

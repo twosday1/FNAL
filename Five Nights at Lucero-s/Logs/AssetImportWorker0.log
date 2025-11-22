@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.2/respin/6000.2.7f1-2eb0c79396db' branch; Version is '6000.2.7f2 (2b518236b676) revision 2838914'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Brandon" at "2025-10-28T21:03:47.7279916Z"
-OS: 'Windows 11  (10.0.26200) 64bit Core' Language: 'en' Physical Memory: 32693 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-SaFyu" at "2025-11-22T02:58:19.0180793Z"
+OS: 'Windows 11  (10.0.26200) 64bit Core' Language: 'en' Physical Memory: 14181 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2025-10-28T21:03:47Z
+Date: 2025-11-22T02:58:19Z
 
 COMMAND LINE ARGUMENTS:
 C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe
@@ -13,23 +13,23 @@ C:\Program Files\Unity\Hub\Editor\6000.2.7f2\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/Brandon/Five Nights at Lucero-s/Five Nights at Lucero-s
+C:/Desktop/Five_Nights/FNAL/Five Nights at Lucero-s
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59327
+54732
 -licensingIpc
-LicenseClient-Brandon
+LicenseClient-SaFyu
 -job-worker-count
-5
+7
 -background-job-worker-count
 8
 -gc-helper-count
 1
 -name
 AssetImport
-Successfully changed project path to: C:/Users/Brandon/Five Nights at Lucero-s/Five Nights at Lucero-s
-C:/Users/Brandon/Five Nights at Lucero-s/Five Nights at Lucero-s
+Successfully changed project path to: C:/Desktop/Five_Nights/FNAL/Five Nights at Lucero-s
+C:/Desktop/Five_Nights/FNAL/Five Nights at Lucero-s
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-allocator-temp-initial-block-size-main=262144"
     "memorysetup-allocator-temp-initial-block-size-worker=262144"
@@ -65,27 +65,29 @@ C:/Users/Brandon/Five Nights at Lucero-s/Five Nights at Lucero-s
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19480]  Target information:
+Player connection [12904]  Target information:
 
-Player connection [19480]  * "[IP] 10.253.81.64 [Port] 0 [Flags] 2 [Guid] 2725191879 [EditorId] 2725191879 [Version] 1048832 [Id] WindowsEditor(7,main) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [12904]  * "[IP] 172.16.0.2 [Port] 0 [Flags] 2 [Guid] 1636225677 [EditorId] 1636225677 [Version] 1048832 [Id] WindowsEditor(7,bamdinlatop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [19480] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [19480] Host joined alternative multi-casting on [225.0.0.222:34997]...
-JobSystem: Creating JobQueue using job-worker-count value 5
+Player connection [12904]  * "[IP] 10.0.0.180 [Port] 0 [Flags] 2 [Guid] 1636225677 [EditorId] 1636225677 [Version] 1048832 [Id] WindowsEditor(7,bamdinlatop) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [12904] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [12904] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
 [Physics::Module] Id: 0xdecafbad
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 11908, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 12828, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.3+a4e98f1
-  Session Id:              80680d8d34214526a11f06df90fcc9b6
-  Correlation Id:          b6de0a46c1f7dd8985a05f4f88fb99ec
-  External correlation Id: 5602025241338468016
-  Machine Id:              Bob2bUukoTp+lnsjA4DnkBjU2Ws=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Brandon" (connect: 0.00s, validation: 0.00s, handshake: 0.04s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Brandon-notifications" at "2025-10-28T21:03:47.7699485Z"
-[Licensing::Module] Licensing Background thread has ended after 0.04s
+  Session Id:              c4fb0700443145099ab0ac83e417a7af
+  Correlation Id:          e354cd6c131df141ea16a4f1c03b963d
+  External correlation Id: 3459560946004333814
+  Machine Id:              pVne6PCmda/9TLWjlrbYiKBtcd8=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-SaFyu" (connect: 0.00s, validation: 0.00s, handshake: 0.09s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-SaFyu-notifications" at "2025-11-22T02:58:19.1082896Z"
+[Licensing::Module] Licensing Background thread has ended after 0.09s
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
 [Physics::Module] Name: PhysX
@@ -93,59 +95,59 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 3.51 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 5.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.2.7f2 (2b518236b676)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.2.7f2/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/Brandon/Five Nights at Lucero-s/Five Nights at Lucero-s/Assets
+[Subsystems] Discovering subsystems at path C:/Desktop/Five_Nights/FNAL/Five Nights at Lucero-s/Assets
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 3070 (ID=0x2484)
-    Vendor:   NVIDIA
-    VRAM:     8018 MB
-    Driver:   32.0.15.7680
+    Renderer: AMD Radeon(TM) Graphics (ID=0x164c)
+    Vendor:   ATI
+    VRAM:     7090 MB
+    Driver:   31.0.21024.2004
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.2.7f2/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.2.7f2/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.2.7f2/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.2.7f2/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002684 seconds.
-- Loaded All Assemblies, in  0.382 seconds
+Registered in 0.005329 seconds.
+- Loaded All Assemblies, in  0.747 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.336 seconds
-Domain Reload Profiling: 715ms
-	BeginReloadAssembly (130ms)
+- Finished resetting the current domain, in  0.686 seconds
+Domain Reload Profiling: 1428ms
+	BeginReloadAssembly (279ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (53ms)
-	LoadAllAssembliesAndSetupDomain (147ms)
-		LoadAssemblies (126ms)
+	RebuildCommonClasses (62ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (93ms)
+	LoadAllAssembliesAndSetupDomain (282ms)
+		LoadAssemblies (273ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (144ms)
-			TypeCache.Refresh (142ms)
-				TypeCache.ScanAssembly (130ms)
+		AnalyzeDomain (277ms)
+			TypeCache.Refresh (274ms)
+				TypeCache.ScanAssembly (248ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (336ms)
+	FinalizeReload (686ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (298ms)
+		SetupLoadedEditorAssemblies (631ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (47ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (65ms)
-			ProcessInitializeOnLoadAttributes (134ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			InitializePlatformSupportModulesInManaged (80ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (142ms)
+			ProcessInitializeOnLoadAttributes (305ms)
+			ProcessInitializeOnLoadMethodAttributes (97ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -156,61 +158,150 @@ Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
-  Id: F4-R6ZA-ZSHG-8SET-SSDW-XXXX
-  Product: Unity Personal
-  Type: ULF
-  Expiration: Unlimited
-[Licensing::Module] License group:
   Id: 2475117316126-UnityPersXXXX
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-- Loaded All Assemblies, in  0.658 seconds
-Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.708 seconds
+Refreshing native plugins compatible for Editor in 3.08 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.795 seconds
-Domain Reload Profiling: 1447ms
-	BeginReloadAssembly (189ms)
+- Finished resetting the current domain, in  1.482 seconds
+Domain Reload Profiling: 3180ms
+	BeginReloadAssembly (485ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (17ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (374ms)
-		LoadAssemblies (315ms)
+		CreateAndSetChildDomain (69ms)
+	RebuildCommonClasses (110ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (99ms)
+	LoadAllAssembliesAndSetupDomain (984ms)
+		LoadAssemblies (934ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (166ms)
-			TypeCache.Refresh (136ms)
-				TypeCache.ScanAssembly (126ms)
-			BuildScriptInfoCaches (23ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (795ms)
+		AnalyzeDomain (362ms)
+			TypeCache.Refresh (291ms)
+				TypeCache.ScanAssembly (262ms)
+			BuildScriptInfoCaches (57ms)
+			ResolveRequiredComponents (9ms)
+	FinalizeReload (1483ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (687ms)
+		SetupLoadedEditorAssemblies (1203ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (100ms)
-			ProcessInitializeOnLoadAttributes (540ms)
-			ProcessInitializeOnLoadMethodAttributes (31ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (10ms)
+			BeforeProcessingInitializeOnLoad (282ms)
+			ProcessInitializeOnLoadAttributes (853ms)
+			ProcessInitializeOnLoadMethodAttributes (41ms)
+			AfterProcessingInitializeOnLoad (13ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 2.11 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 3495 unused Assets / (1.2 MB). Loaded Objects now: 4007.
-Memory consumption went from 156.7 MB to 155.5 MB.
-Total: 9.740000 ms (FindLiveObjects: 0.572100 ms CreateObjectMapping: 0.296600 ms MarkObjects: 7.250800 ms  DeleteObjects: 1.619000 ms)
+Unloading 3495 unused Assets / (1.3 MB). Loaded Objects now: 4007.
+Memory consumption went from 156.8 MB to 155.5 MB.
+Total: 13.337500 ms (FindLiveObjects: 0.931600 ms CreateObjectMapping: 0.349400 ms MarkObjects: 8.043200 ms  DeleteObjects: 4.010200 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 384905.082796 seconds.
+  path: Assets/Footsteps Mini Sound Pack/Flats_Metal_Grate_003.wav
+  artifactKey: Guid(04aac641203ed554dbbc8d7fb6b315f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footsteps Mini Sound Pack/Flats_Metal_Grate_003.wav using Guid(04aac641203ed554dbbc8d7fb6b315f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fec4284c8cd3c92c22eca022910a9153') in 0.2276294 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Horror SFX - 082918/beat/beat3.wav
+  artifactKey: Guid(9d4d6bf5a98b1bc44897de5bdd928750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Horror SFX - 082918/beat/beat3.wav using Guid(9d4d6bf5a98b1bc44897de5bdd928750) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '07d1c1c5e6ec4b50466f2252c436603b') in 0.0750906 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Horror SFX - 082918/beat/beat4.wav
+  artifactKey: Guid(650435bfbabc95d4db225bc0f715bc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Horror SFX - 082918/beat/beat4.wav using Guid(650435bfbabc95d4db225bc0f715bc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '83dfc9d172bd6c05080bd106bbe58b1c') in 0.0585706 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Footsteps Mini Sound Pack/LowMetal_Mono_03.wav
+  artifactKey: Guid(254519b8a14f3de4db117792a2de4fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Footsteps Mini Sound Pack/LowMetal_Mono_03.wav using Guid(254519b8a14f3de4db117792a2de4fe4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '65441465f70e56b7be412a0991f83795') in 0.0402511 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Horror SFX - 082918/beat/beat1.wav
+  artifactKey: Guid(f90cf4c68249bff4199dc22b7e6c552f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Horror SFX - 082918/beat/beat1.wav using Guid(f90cf4c68249bff4199dc22b7e6c552f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fe4b6860cdb32285dbfc264825e706bc') in 0.065532 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 129.124611 seconds.
+  path: Assets/SoundFx/Clock.mixer
+  artifactKey: Guid(8e0d04437523496478e5aefa92535452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SoundFx/Clock.mixer using Guid(8e0d04437523496478e5aefa92535452) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter)Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+ -> (artifact id: '80b25b94d449d7589ac87ae49f4d7e2b') in 0.0048858 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010560 seconds.
+  path: Assets/SoundFx/clock chime.mp3
+  artifactKey: Guid(9b49c8ddf48f477408bdbd97ccf109d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SoundFx/clock chime.mp3 using Guid(9b49c8ddf48f477408bdbd97ccf109d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b6045c9de8b4db803ca0b0f653e80d4') in 0.0302374 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015137 seconds.
+  path: Assets/SoundFx/Dogbark1.wav
+  artifactKey: Guid(21d50151eb0458c44a5a819f6eff4824) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SoundFx/Dogbark1.wav using Guid(21d50151eb0458c44a5a819f6eff4824) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ac6903c2782eaa095ab184352b27ad88') in 0.0315352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.006365 seconds.
+  path: Assets/SoundFx/Dogbark3.wav
+  artifactKey: Guid(f3452725647aad349a4a2cf0df8ae265) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SoundFx/Dogbark3.wav using Guid(f3452725647aad349a4a2cf0df8ae265) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cfb49bba7fcbefe71d1e2bfa9173b88e') in 0.0390024 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/SoundFx/looped ambient.wav
+  artifactKey: Guid(0d422c61e71e2a54ba5a4305ec37aac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SoundFx/looped ambient.wav using Guid(0d422c61e71e2a54ba5a4305ec37aac6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ddbef47c8bdb5c1a5ee74ae5130ac368') in 0.0397769 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000141 seconds.
+  path: Assets/SoundFx/window knocking.wav
+  artifactKey: Guid(83315294012bbd745ba3d3e33fbde11b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SoundFx/window knocking.wav using Guid(83315294012bbd745ba3d3e33fbde11b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '41dc61047e10cbcd4e3a8f0fb847c02f') in 0.056376 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

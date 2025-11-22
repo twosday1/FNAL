@@ -1210,19 +1210,25 @@ MonoBehaviour:
   - {fileID: 1341906857}
   - {fileID: 1248729485}
   - {fileID: 107759338}
-  movementInterval: 5
-  startMoveChance: 0.3
-  forwardMoveChance: 0.1
-  backwardMoveChance: 0.1
-  perLevelChanceIncrease: 0.05
-  maxMoveChance: 1
-  perLevelIntervalMultiplier: 0.1
-  minMovementInterval: 1
-  moveDuration: 0.5
-  doorKillDelay: 7
-  requiredFlashesToReset: 4
-  debugLogs: 1
+  opportunityInterval: 30
+  firstOpportunityDelay: 0
+  repeatOpportunities: 0
+  opportunityIntervalPerNight:
+  - 10
+  - 8
+  - 7
+  - 5
+  - 3
+  - 3
+  startNight: 1
+  aiLevelPerNight: 030000000500000007000000090000000b0000000d000000
+  killSpot: {fileID: 107759338}
+  killSpotWaitTime: 6
+  requiredFlashesToReset: 3
+  acceptFlashAnywhere: 0
   allowFlashWhenNotAtDoor: 0
+  debugLogs: 1
+  allowBackward: 1
 --- !u!54 &120291343
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1783,8 +1789,8 @@ MonoBehaviour:
   saveAndMenuButton: {fileID: 983138345}
   screenFade: {fileID: 902111181}
   maxLevels: 5
-  firstLevelDuration: 60
-  levelIncrement: 5
+  firstLevelDuration: 360
+  levelIncrement: 20
   startSceneName: Start Screen
   saveKey: SavedNight
 --- !u!4 &188856594
@@ -2201,19 +2207,25 @@ MonoBehaviour:
   - {fileID: 1494240159}
   - {fileID: 1165531662}
   - {fileID: 2082864469}
-  movementInterval: 15
-  startMoveChance: 0.5
-  forwardMoveChance: 0.25
-  backwardMoveChance: 0.25
-  perLevelChanceIncrease: 0.05
-  maxMoveChance: 1
-  perLevelIntervalMultiplier: 0.1
-  minMovementInterval: 1
-  moveDuration: 1
-  doorKillDelay: 5
+  opportunityInterval: 30
+  firstOpportunityDelay: 0
+  repeatOpportunities: 0
+  opportunityIntervalPerNight:
+  - 25
+  - 23
+  - 21
+  - 19
+  - 17
+  - 15
+  startNight: 1
+  aiLevelPerNight: 03000000060000000a0000000e0000001000000012000000
+  killSpot: {fileID: 2082864469}
+  killSpotWaitTime: 6
   requiredFlashesToReset: 4
-  debugLogs: 0
+  acceptFlashAnywhere: 0
   allowFlashWhenNotAtDoor: 0
+  debugLogs: 0
+  allowBackward: 1
 --- !u!54 &239674528
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3532,7 +3544,7 @@ Transform:
   m_GameObject: {fileID: 359502828}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.33, y: 4.54, z: -19.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3547,12 +3559,12 @@ AudioSource:
   m_GameObject: {fileID: 359502828}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2e6ee8fe90d2c134c8cb0c565b69f862, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b51b66fd94c5d9e4abe957dd736b5481, type: 3}
+  m_Resource: {fileID: 8300000, guid: 18c153d67d001de419b011e55f887bd5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.386
-  m_Pitch: -1.25
+  m_Volume: 0.2
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -3595,7 +3607,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3625,7 +3637,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.23
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5336,18 +5348,25 @@ MonoBehaviour:
   - {fileID: 1359592353}
   - {fileID: 329988367}
   - {fileID: 1865636326}
-  useFixedTeleportTime: 1
-  fixedTeleportTime: 30
-  repeatTeleport: 1
-  teleportInterval: 30
-  perLevelIntervalDelta: 5
-  minTeleportInterval: 0.5
-  doorKillDelay: 6
-  requiredFlashesToReset: 3
+  opportunityInterval: 30
+  firstOpportunityDelay: 0
+  repeatOpportunities: 1
+  opportunityIntervalPerNight:
+  - 0
+  - 0
+  - 25
+  - 20
+  - 15
+  - 12
+  startNight: 3
+  aiLevelPerNight: 0000000000000000050000000a0000000f00000011000000
   killSpot: {fileID: 1865636326}
-  debugLogs: 1
-  allowFlashWhenNotAtDoor: 1
+  killSpotWaitTime: 6
+  requiredFlashesToReset: 3
   acceptFlashAnywhere: 0
+  allowFlashWhenNotAtDoor: 0
+  debugLogs: 1
+  activeFromNight: 3
 --- !u!4 &486611593 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4539135129340528, guid: 0b50edd1ab1ea9c4ba8edc42f1b15181, type: 3}
@@ -9169,19 +9188,25 @@ MonoBehaviour:
   - {fileID: 1818085065}
   - {fileID: 815938761}
   - {fileID: 2082864469}
-  movementInterval: 10
-  startMoveChance: 0.25
-  forwardMoveChance: 0.16
-  backwardMoveChance: 0.16
-  perLevelChanceIncrease: 0.05
-  maxMoveChance: 1
-  perLevelIntervalMultiplier: 0.1
-  minMovementInterval: 1
-  moveDuration: 0.5
-  doorKillDelay: 6
+  opportunityInterval: 30
+  firstOpportunityDelay: 0
+  repeatOpportunities: 0
+  opportunityIntervalPerNight:
+  - 10
+  - 8
+  - 7
+  - 6
+  - 5
+  - 4
+  startNight: 1
+  aiLevelPerNight: 0300000005000000070000000a0000000e00000010000000
+  killSpot: {fileID: 2082864469}
+  killSpotWaitTime: 6
   requiredFlashesToReset: 4
-  debugLogs: 0
+  acceptFlashAnywhere: 0
   allowFlashWhenNotAtDoor: 0
+  debugLogs: 0
+  allowBackward: 1
 --- !u!54 &922438093
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11696,6 +11721,8 @@ GameObject:
   - component: {fileID: 1278579954}
   - component: {fileID: 1278579953}
   - component: {fileID: 1278579952}
+  - component: {fileID: 1278579956}
+  - component: {fileID: 1278579955}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -11733,7 +11760,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
@@ -11795,6 +11822,48 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278579950}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &1278579955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278579950}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1278579956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278579950}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1306473627
 GameObject:
   m_ObjectHideFlags: 0
@@ -14190,7 +14259,7 @@ MonoBehaviour:
   - TobyAction
   allowOverlap: 0
   playDelay: 0
-  debugLogs: 0
+  debugLogs: 1
 --- !u!82 &1584419031
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14200,9 +14269,9 @@ AudioSource:
   m_GameObject: {fileID: 1584419028}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2e6ee8fe90d2c134c8cb0c565b69f862, type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b51b66fd94c5d9e4abe957dd736b5481, type: 3}
+  m_Resource: {fileID: 8300000, guid: 18c153d67d001de419b011e55f887bd5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14278,7 +14347,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.23
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -14304,7 +14373,7 @@ BoxCollider:
     m_Bits: 0
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
@@ -15803,7 +15872,7 @@ MonoBehaviour:
   - TobyAction
   allowOverlap: 0
   playDelay: 0
-  debugLogs: 0
+  debugLogs: 1
 --- !u!82 &1768463410
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15815,7 +15884,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b51b66fd94c5d9e4abe957dd736b5481, type: 3}
+  m_Resource: {fileID: 8300000, guid: 18c153d67d001de419b011e55f887bd5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -15891,7 +15960,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.23
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -16153,7 +16222,7 @@ Transform:
   m_GameObject: {fileID: 1783321736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16183,7 +16252,7 @@ MonoBehaviour:
   - TobyAction
   allowOverlap: 0
   playDelay: 0
-  debugLogs: 0
+  debugLogs: 1
 --- !u!82 &1783321739
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16195,7 +16264,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b51b66fd94c5d9e4abe957dd736b5481, type: 3}
+  m_Resource: {fileID: 8300000, guid: 18c153d67d001de419b011e55f887bd5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -16271,7 +16340,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.23
       inSlope: 0
       outSlope: 0
       tangentMode: 0

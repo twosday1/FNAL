@@ -434,6 +434,7 @@
 "Assets/Scripts/LeiaAction.cs"
 "Assets/Scripts/Level Progression.cs"
 "Assets/Scripts/LillyAction.cs"
+"Assets/Scripts/MovementAgentBase.cs"
 "Assets/Scripts/PlayerMovementController.cs"
 "Assets/Scripts/RandomAudio.cs"
 "Assets/Scripts/ScreenFadeIn.cs"
