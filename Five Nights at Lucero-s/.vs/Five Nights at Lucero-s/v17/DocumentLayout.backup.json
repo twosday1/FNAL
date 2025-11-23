@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|c:\\desktop\\five_nights\\fnal\\five nights at lucero-s\\assets\\scripts\\level progression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\level progression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\level progression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|c:\\desktop\\five_nights\\fnal\\five nights at lucero-s\\assets\\scripts\\movementagentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|c:\\desktop\\five_nights\\fnal\\five nights at lucero-s\\assets\\scripts\\flashlighttoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flashlighttoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\buttonsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\movementagentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movementagentbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\flashlighttoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flashlighttoggle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\cameraswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameraswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\screenfadein.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\screenfadein.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\stormyaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stormyaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\tobyaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,20 +43,8 @@
       "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lillyaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\stormyaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\stormyaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\dogwalking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dogwalking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\buttonsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\assets\\scripts\\cameraswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78485733-3D60-941D-901A-A3C0A691233A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cameraswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,39 +58,37 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
+              "Title": "ScreenFadeIn.cs",
+              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\ScreenFadeIn.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ScreenFadeIn.cs",
+              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\ScreenFadeIn.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ScreenFadeIn.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T04:55:15.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MovementAgentBase.cs",
               "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\MovementAgentBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MovementAgentBase.cs",
               "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\MovementAgentBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\MovementAgentBase.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAIwAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIoBAAAAAAAAAIA4wAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T04:14:28.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T04:14:28.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TobyAction.cs",
-              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\TobyAction.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TobyAction.cs",
-              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\TobyAction.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TobyAction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T22:01:12.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FlashlightToggle.cs",
               "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\FlashlightToggle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlashlightToggle.cs",
               "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\FlashlightToggle.cs",
               "RelativeToolTip": "Assets\\Scripts\\FlashlightToggle.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-10T19:00:41.473Z",
               "EditorCaption": ""
@@ -99,22 +101,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Level Progression.cs",
               "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\Level Progression.cs",
               "RelativeToolTip": "Assets\\Scripts\\Level Progression.cs",
-              "ViewState": "AgIAAGkBAAAAAAAAAAAnwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAnwHEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-10T18:45:11.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LeiaAction.cs",
-              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\LeiaAction.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LeiaAction.cs",
-              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\LeiaAction.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LeiaAction.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAD4vwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T18:10:43.337Z",
               "EditorCaption": ""
             },
             {
@@ -125,14 +114,37 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\StormyAction.cs",
               "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\StormyAction.cs",
               "RelativeToolTip": "Assets\\Scripts\\StormyAction.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAD4vwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAD4vwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T18:05:50.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-10T18:05:50.98Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
+              "Title": "CameraSwitcher.cs",
+              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\CameraSwitcher.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraSwitcher.cs",
+              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\CameraSwitcher.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraSwitcher.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAtwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-10T21:33:49.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ButtonSound.cs",
+              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\ButtonSound.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonSound.cs",
+              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\ButtonSound.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ButtonSound.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T04:16:44.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "LillyAction.cs",
               "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\LillyAction.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LillyAction.cs",
@@ -140,24 +152,35 @@
               "RelativeToolTip": "Assets\\Scripts\\LillyAction.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T18:08:53.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-10T18:08:53.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CameraSwitcher.cs",
-              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\CameraSwitcher.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraSwitcher.cs",
-              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\CameraSwitcher.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CameraSwitcher.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAA3wAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "LeiaAction.cs",
+              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\LeiaAction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LeiaAction.cs",
+              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\LeiaAction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LeiaAction.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAD4vwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T21:33:49.255Z"
+              "WhenOpened": "2025-10-10T18:10:43.337Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "TobyAction.cs",
+              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\TobyAction.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TobyAction.cs",
+              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\TobyAction.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TobyAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T22:01:12.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "DogWalking.cs",
               "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\DogWalking.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DogWalking.cs",
@@ -166,18 +189,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-17T04:16:48.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ButtonSound.cs",
-              "DocumentMoniker": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\ButtonSound.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonSound.cs",
-              "ToolTip": "C:\\Desktop\\Five_Nights\\FNAL\\Five Nights at Lucero-s\\Assets\\Scripts\\ButtonSound.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ButtonSound.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T04:16:44.044Z"
             }
           ]
         }

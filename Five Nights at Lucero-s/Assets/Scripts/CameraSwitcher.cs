@@ -16,7 +16,13 @@ public class CameraSwitcher : MonoBehaviour
     public GameObject buttonSecondCamera; // Assign button for second camera
     public GameObject buttonThirdCamera;  // Assign button for third camera
 
+    [Header("Camera-only UI")]
+    [Tooltip("Recharge button shown only while viewing cameras")]
+    public GameObject rechargeButton; // Assign the recharge Button GameObject here
+
     private bool isMainActive = true;
+
+    public bool InCameraView => !isMainActive; // true when viewing cameras (not main)
 
     private void Start()
     {
@@ -29,6 +35,9 @@ public class CameraSwitcher : MonoBehaviour
         // Hide instant switch buttons at start
         if (buttonSecondCamera != null) buttonSecondCamera.SetActive(false);
         if (buttonThirdCamera != null) buttonThirdCamera.SetActive(false);
+
+        // Hide recharge button at start (only visible in camera view)
+        if (rechargeButton != null) rechargeButton.SetActive(false);
     }
 
     public void ToggleCamera()
@@ -61,16 +70,18 @@ public class CameraSwitcher : MonoBehaviour
         // Set buttons active/inactive after the same delay as camera switch
         SetButtonsActive(showButtons);
 
-        // Show instant switch buttons only after switching from main to second camera
+        // Show instant switch buttons and camera-only UI based on current state
         if (!isMainActive)
         {
             if (buttonSecondCamera != null) buttonSecondCamera.SetActive(true);
             if (buttonThirdCamera != null) buttonThirdCamera.SetActive(true);
+            if (rechargeButton != null) rechargeButton.SetActive(true);
         }
         else
         {
             if (buttonSecondCamera != null) buttonSecondCamera.SetActive(false);
             if (buttonThirdCamera != null) buttonThirdCamera.SetActive(false);
+            if (rechargeButton != null) rechargeButton.SetActive(false);
         }
 
         yield return new WaitForSeconds(closeDelay);
@@ -97,6 +108,12 @@ public class CameraSwitcher : MonoBehaviour
             if (mainCamera != null) mainCamera.enabled = false;
             if (thirdCamera != null) thirdCamera.enabled = false;
             secondCamera.enabled = true;
+
+            isMainActive = false;
+            SetButtonsActive(false);
+            if (buttonSecondCamera != null) buttonSecondCamera.SetActive(true);
+            if (buttonThirdCamera != null) buttonThirdCamera.SetActive(true);
+            if (rechargeButton != null) rechargeButton.SetActive(true);
         }
     }
 
@@ -108,6 +125,12 @@ public class CameraSwitcher : MonoBehaviour
             if (mainCamera != null) mainCamera.enabled = false;
             if (secondCamera != null) secondCamera.enabled = false;
             thirdCamera.enabled = true;
+
+            isMainActive = false;
+            SetButtonsActive(false);
+            if (buttonSecondCamera != null) buttonSecondCamera.SetActive(true);
+            if (buttonThirdCamera != null) buttonThirdCamera.SetActive(true);
+            if (rechargeButton != null) rechargeButton.SetActive(true);
         }
     }
 }

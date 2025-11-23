@@ -129,6 +129,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: CameraSwitcher
     methodName: SwitchToSecondCameraInstant
+  - assembly: Assembly-CSharp
+    fullTypeName: FlashlightToggle
+    methodName: OnRechargeButtonPressed
   sceneClasses:
     Assets/Scenes/RoomScene.unity:
     - Class: 1
@@ -166,57 +169,57 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 8824}
+      Script: {instanceID: 8826}
     - Class: 114
-      Script: {instanceID: 9072}
+      Script: {instanceID: 9074}
     - Class: 114
-      Script: {instanceID: 9544}
+      Script: {instanceID: 9546}
     - Class: 114
-      Script: {instanceID: 9788}
+      Script: {instanceID: 9790}
     - Class: 114
-      Script: {instanceID: 10208}
+      Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10608}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 10684}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 10890}
+      Script: {instanceID: 10892}
     - Class: 114
-      Script: {instanceID: 10982}
+      Script: {instanceID: 10984}
     - Class: 114
-      Script: {instanceID: 11128}
+      Script: {instanceID: 11130}
     - Class: 114
-      Script: {instanceID: 11400}
+      Script: {instanceID: 11402}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11992}
     - Class: 114
-      Script: {instanceID: 12282}
+      Script: {instanceID: 12286}
     - Class: 114
-      Script: {instanceID: 12418}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 12606}
     - Class: 114
-      Script: {instanceID: 13216}
+      Script: {instanceID: 13220}
     - Class: 114
-      Script: {instanceID: 13480}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 13722}
+      Script: {instanceID: 13726}
     - Class: 114
-      Script: {instanceID: 13964}
+      Script: {instanceID: 13968}
     - Class: 114
-      Script: {instanceID: 14374}
+      Script: {instanceID: 14378}
     - Class: 114
-      Script: {instanceID: 14608}
+      Script: {instanceID: 14612}
     - Class: 114
-      Script: {instanceID: 14620}
+      Script: {instanceID: 14624}
     - Class: 114
-      Script: {instanceID: 14732}
+      Script: {instanceID: 14736}
     - Class: 114
-      Script: {instanceID: 15162}
+      Script: {instanceID: 15166}
     - Class: 114
-      Script: {instanceID: 15470}
+      Script: {instanceID: 15474}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -230,6 +233,8 @@ ScriptsOnlyBuild:
     - Class: 193
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -273,35 +278,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 8774}
+      Script: {instanceID: 8776}
     - Class: 114
-      Script: {instanceID: 8824}
+      Script: {instanceID: 8826}
     - Class: 114
-      Script: {instanceID: 9072}
+      Script: {instanceID: 9074}
     - Class: 114
-      Script: {instanceID: 9552}
+      Script: {instanceID: 9554}
     - Class: 114
-      Script: {instanceID: 10208}
+      Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10684}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 10890}
+      Script: {instanceID: 10892}
     - Class: 114
-      Script: {instanceID: 11128}
+      Script: {instanceID: 11130}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13238}
+      Script: {instanceID: 13242}
     - Class: 114
-      Script: {instanceID: 13388}
+      Script: {instanceID: 13392}
     - Class: 114
-      Script: {instanceID: 13480}
+      Script: {instanceID: 13484}
     - Class: 114
-      Script: {instanceID: 14156}
+      Script: {instanceID: 14160}
     - Class: 114
-      Script: {instanceID: 14316}
+      Script: {instanceID: 14320}
     - Class: 114
-      Script: {instanceID: 14374}
+      Script: {instanceID: 14378}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -735,7 +740,7 @@ ScriptsOnlyBuild:
     className: DigitalClock
   - hash:
       serializedVersion: 2
-      Hash: 9980c1db39d7cf3cb6a43ef689a6e222
+      Hash: c42d604051dbf2385fe1b749b43896ae
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LeiaAction
@@ -789,7 +794,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 0cc1532651c99573ec6bc36579afa088
+      Hash: f92ea8b00552289c4ce913ef29ff4b1c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FlashlightToggle
@@ -1113,7 +1118,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: e3c6d54d3589a744f406e40cafa2a22d
+      Hash: 8ce88e5bc46053fee3a0369bb76e4b3c
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LillyAction
@@ -1365,7 +1370,7 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
-      Hash: 3ed7b7bdee9ddf1c09dfef72290a7fdf
+      Hash: 1fc2e905de11fd17037abd097b57fa42
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CameraSwitcher
@@ -1389,7 +1394,7 @@ ScriptsOnlyBuild:
     className: UnityOnSelectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c278d0a00b2381b5b4f24f2eae618ffc
+      Hash: 90841b0f4f83878a1011589c3b4da1c3
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LevelProgression
@@ -1455,7 +1460,7 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 69015843de3e95130e05c6b9c9e82ef7
+      Hash: 0123ba3ca6c3be976e3f5836c38a3bc8
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StormyAction
@@ -1497,7 +1502,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 4b1c7565fb8bc655097acbb2e4e42443
+      Hash: 0d8b247c585113edd03635da50afebec
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: TobyAction
@@ -1505,4 +1510,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Start Screen.unity
   - Assets/Scenes/RoomScene.unity
-  playerPath: C:/Users/Brandon/Desktop/Test Builds/Five Nights at Lucero's.exe
+  playerPath: C:/Desktop/game builds/Five Nights at Lucero's.exe

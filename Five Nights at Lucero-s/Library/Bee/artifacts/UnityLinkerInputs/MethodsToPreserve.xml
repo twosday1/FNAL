@@ -11,6 +11,9 @@
 			<method name="SwitchToThirdCameraInstant"/>
 			<method name="ToggleCamera"/>
 		</type>
+		<type fullname="FlashlightToggle">
+			<method name="OnRechargeButtonPressed"/>
+		</type>
 		<type fullname="PlayerMovementController">
 			<method name="MoveToTarget"/>
 			<method name="MoveToTarget"/>

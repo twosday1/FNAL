@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -16,13 +17,23 @@ public class LevelProgression : MonoBehaviour
     [Header("Fade")]
     public ScreenFadeIn screenFade;
 
+    [Header("Start SFX")]
+    [Tooltip("Optional AudioSource to play a 'Night X' or start SFX when the start scene shows.")]
+    public AudioSource startSfxSource;
+    [Tooltip("Optional clip to play for the start SFX. If null, startSfxSource.clip will be used.")]
+    public AudioClip startSfxClip;
+    [Tooltip("If true the global audio listener will be unpaused before playing the start SFX.")]
+    public bool unpauseAudioOnStart = true;
+    [Tooltip("Play the start SFX when the 'Night X' message appears (only on the configured start scene).")]
+    public bool playStartSfxOnShow = true;
+
     [Header("Level Settings")]
     public int maxLevels = 5;
     public float firstLevelDuration = 360f;
     public float levelIncrement = 25f;
 
     [Header("Save Settings")]
-    [Tooltip("Scene name to return to when saving and returning to menu.")]
+    [Tooltip("Scene name to return to when saving and returning to menu. This is also treated as the 'start scene' name.")]
     public string startSceneName = "Start";
     [Tooltip("PlayerPrefs key used to store the saved night.")]
     public string saveKey = "SavedNight";
@@ -37,6 +48,18 @@ public class LevelProgression : MonoBehaviour
     private float timer = 0f;
     private float currentLevelDuration;
     private bool levelActive = false;
+
+    // Track audio sources we explicitly paused because they ignore AudioListener.pause
+    private List<AudioSource> pausedAudioSources = new List<AudioSource>();
+
+    // Keep previous canvas states so we can restore them after a forced-black
+    private Canvas fadeCanvasPrev = null;
+    private bool fadeCanvasPrevOverrideSorting = false;
+    private int fadeCanvasPrevOrder = 0;
+
+    private Canvas messageCanvasPrev = null;
+    private bool messageCanvasPrevOverrideSorting = false;
+    private int messageCanvasPrevOrder = 0;
 
     void Start()
     {
@@ -118,6 +141,15 @@ public class LevelProgression : MonoBehaviour
         messageText.gameObject.SetActive(true);
         SetMessageAlpha(1f);
 
+        // Play start SFX only if this scene is the configured start/menu scene
+        if (playStartSfxOnShow && SceneManager.GetActiveScene().name == startSceneName)
+        {
+            if (unpauseAudioOnStart)
+                AudioListener.pause = false; // ensure audio will be audible
+
+            PlayStartSfx();
+        }
+
         // Fade in screen and message together
         float fadeTime = screenFade != null ? screenFade.fadeDuration : 1f;
         float elapsed = 0f;
@@ -146,6 +178,44 @@ public class LevelProgression : MonoBehaviour
 
         // Unpause global audio now that the level actually begins
         AudioListener.pause = false;
+
+        // Restore any AudioSources we paused because they ignored listener pause
+        if (pausedAudioSources != null && pausedAudioSources.Count > 0)
+        {
+            foreach (var src in pausedAudioSources)
+            {
+                if (src == null) continue;
+                try { src.UnPause(); } catch { }
+            }
+            pausedAudioSources.Clear();
+        }
+
+        // Restore any canvas sorting changes we made while forcing black so UI appears normally.
+        if (fadeCanvasPrev != null)
+        {
+            try
+            {
+                fadeCanvasPrev.overrideSorting = fadeCanvasPrevOverrideSorting;
+                fadeCanvasPrev.sortingOrder = fadeCanvasPrevOrder;
+            }
+            catch { }
+            fadeCanvasPrev = null;
+        }
+
+        if (messageCanvasPrev != null)
+        {
+            try
+            {
+                messageCanvasPrev.overrideSorting = messageCanvasPrevOverrideSorting;
+                messageCanvasPrev.sortingOrder = messageCanvasPrevOrder;
+            }
+            catch { }
+            messageCanvasPrev = null;
+        }
+
+        // Release forced black state if we set it (fade back in)
+        if (screenFade != null)
+            screenFade.ReleaseForcedBlack(true);
 
         // Notify Stormy, Lilly, Leia and Toby that the level has started so they can begin movement
         var stormy = FindObjectOfType<StormyAction>();
@@ -223,6 +293,9 @@ public class LevelProgression : MonoBehaviour
         // Fade to black
         if (screenFade != null)
             yield return StartCoroutine(screenFade.FadeOutCoroutine());
+
+        // Pause all audio now that the end UI will show
+        CutToBlackAndPauseAudio();
 
         // Show "Night Survived"
         messageText.text = "Night Survived";
@@ -314,7 +387,38 @@ public class LevelProgression : MonoBehaviour
                 s.ResetAndDisablePlayback();
         }
 
-        StartCoroutine(ResetAndWaitForFadeIn());
+        // Show the death UI and keep screen black until player chooses Retry or Save & Return
+        if (messageText != null)
+        {
+            messageText.text = "You Died";
+            messageText.gameObject.SetActive(true);
+            SetMessageAlpha(1f);
+        }
+
+        // Show Retry button
+        if (retryButton != null)
+        {
+            retryButton.gameObject.SetActive(true);
+            retryButton.onClick.RemoveAllListeners();
+            retryButton.onClick.AddListener(() => StartCoroutine(RetryLevelSequence()));
+        }
+
+        // Show Save & Return button
+        if (saveAndMenuButton != null)
+        {
+            saveAndMenuButton.gameObject.SetActive(true);
+            saveAndMenuButton.onClick.RemoveAllListeners();
+            saveAndMenuButton.onClick.AddListener(SaveAndReturnToMenu);
+        }
+
+        // Ensure Next Night button is hidden
+        if (nextNightButton != null)
+            nextNightButton.gameObject.SetActive(false);
+
+        // Stop gameplay updates
+        levelActive = false;
+
+        Debug.Log("[LevelProgression] Player died: death UI shown and screen remains black until retry.");
     }
 
     IEnumerator RetryLevelSequence()
@@ -347,6 +451,10 @@ public class LevelProgression : MonoBehaviour
     {
         SaveProgress();
 
+        // Before returning to menu, unpause audio and play the start/menu music persistently
+        AudioListener.pause = false;
+        PlayStartSfxPersistent();
+
         if (string.IsNullOrEmpty(startSceneName))
         {
             // If no start scene specified, fallback to first scene in build settings (index 0)
@@ -371,12 +479,124 @@ public class LevelProgression : MonoBehaviour
     // Helper: immediately cut to black and pause all audio (called on death)
     private void CutToBlackAndPauseAudio()
     {
-        if (screenFade != null)
-            screenFade.SetAlpha(1f);
+        // Prefer using the ScreenFade helper to force-black the fade image and top-sort it.
+        if (screenFade != null && screenFade.fadeImage != null)
+        {
+            var img = screenFade.fadeImage;
+            var canvas = img.canvas;
+            if (canvas != null)
+            {
+                // remember previous canvas settings so we can restore them
+                fadeCanvasPrev = canvas;
+                fadeCanvasPrevOverrideSorting = canvas.overrideSorting;
+                fadeCanvasPrevOrder = canvas.sortingOrder;
+            }
+
+            // Force the fade image black and on top
+            screenFade.ForceBlackImmediate(10000);
+
+            // Ensure the message UI renders above the black overlay
+            if (messageText != null)
+            {
+                var msgCanvas = messageText.GetComponentInParent<Canvas>();
+                if (msgCanvas != null)
+                {
+                    messageCanvasPrev = msgCanvas;
+                    messageCanvasPrevOverrideSorting = msgCanvas.overrideSorting;
+                    messageCanvasPrevOrder = msgCanvas.sortingOrder;
+
+                    msgCanvas.overrideSorting = true;
+                    msgCanvas.sortingOrder = 10001;
+                }
+            }
+        }
+        else
+        {
+            // Fallback: if no fade image present, try to make cameras render a solid black background
+            foreach (var cam in Camera.allCameras)
+            {
+                try
+                {
+                    cam.clearFlags = CameraClearFlags.SolidColor;
+                    cam.backgroundColor = Color.black;
+                    // Optionally hide all layers to be safe:
+                    cam.cullingMask = 0;
+                }
+                catch { }
+            }
+        }
 
         // Pause global audio so everything mutes immediately
         AudioListener.pause = true;
 
-        Debug.Log("[LevelProgression] Player died: screen cut to black and audio paused.");
+        // Some AudioSources may ignore listener pause; pause them explicitly and remember to unpause later.
+        pausedAudioSources.Clear();
+        foreach (var src in FindObjectsOfType<AudioSource>())
+        {
+            if (src == null) continue;
+            if (src.ignoreListenerPause)
+            {
+                try
+                {
+                    if (src.isPlaying)
+                    {
+                        src.Pause();
+                        pausedAudioSources.Add(src);
+                    }
+                }
+                catch { }
+            }
+        }
+
+        Debug.Log("[LevelProgression] Player died: screen forced to black and audio paused.");
+    }
+
+    // Play the configured start SFX (called when Night X message appears on the start scene)
+    private void PlayStartSfx()
+    {
+        if (startSfxSource != null)
+        {
+            AudioClip clip = startSfxClip != null ? startSfxClip : startSfxSource.clip;
+            if (clip != null)
+            {
+                startSfxSource.PlayOneShot(clip);
+                Debug.Log("[LevelProgression] Played start SFX via startSfxSource.");
+                return;
+            }
+        }
+
+        if (startSfxClip != null)
+        {
+            Vector3 pos = Camera.main != null ? Camera.main.transform.position : Vector3.zero;
+            AudioSource.PlayClipAtPoint(startSfxClip, pos);
+            Debug.Log("[LevelProgression] Played start SFX via PlayClipAtPoint.");
+            return;
+        }
+
+        Debug.Log("[LevelProgression] No start SFX assigned.");
+    }
+
+    // Play start/menu SFX and keep it across the scene load (used when returning to menu)
+    private void PlayStartSfxPersistent()
+    {
+        AudioClip clip = startSfxClip != null ? startSfxClip : (startSfxSource != null ? startSfxSource.clip : null);
+        if (clip == null)
+        {
+            Debug.Log("[LevelProgression] No start SFX assigned for persistent playback.");
+            return;
+        }
+
+        GameObject go = new GameObject("PersistentStartSfx");
+        DontDestroyOnLoad(go);
+        var src = go.AddComponent<AudioSource>();
+        src.clip = clip;
+        src.playOnAwake = false;
+        src.spatialBlend = 0f; // 2D
+        src.loop = false;
+        src.volume = startSfxSource != null ? startSfxSource.volume : 1f;
+        try { src.outputAudioMixerGroup = startSfxSource != null ? startSfxSource.outputAudioMixerGroup : null; } catch { }
+        src.Play();
+        Destroy(go, clip.length + 0.5f);
+        Debug.Log("[LevelProgression] Started persistent start SFX (will survive scene load).");
     }
 }
